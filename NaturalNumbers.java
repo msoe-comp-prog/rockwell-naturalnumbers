@@ -54,6 +54,18 @@ public class NaturalNumbers
         return divisorCount;
     }
 
+    private static int getDivisorCount(int value)
+    {
+        int divisorCount = 1;
+        for (int i = 2; i < (value / 2) + 1; i++) {
+        if (value % i == 0) {
+                divisorCount++;
+            }
+        }
+
+        return divisorCount;
+    }
+
     public static void main(String[] args) throws Throwable
     {
         int[] primes = generatePrimes(1000000);
